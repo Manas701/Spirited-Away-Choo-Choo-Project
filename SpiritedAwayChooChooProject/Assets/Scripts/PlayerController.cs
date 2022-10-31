@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed;
     public float runSpeed;
 
+    public bool canMove;
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +31,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() 
     {
-        Vector3 newVelocity = Vector3.up * rb.velocity.y;
-        float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-        newVelocity.x = Input.GetAxis("Horizontal") * speed;
-        newVelocity.z = Input.GetAxis("Vertical") * speed;
-        rb.velocity = transform.TransformDirection(newVelocity);
+        if (canMove)
+        {
+            Vector3 newVelocity = Vector3.up * rb.velocity.y;
+            float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+            newVelocity.x = Input.GetAxis("Horizontal") * speed;
+            newVelocity.z = Input.GetAxis("Vertical") * speed;
+            rb.velocity = transform.TransformDirection(newVelocity);
+        }
     }
 
     void LateUpdate() {
