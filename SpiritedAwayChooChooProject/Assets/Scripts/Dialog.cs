@@ -11,6 +11,8 @@ public class Dialog : MonoBehaviour
     public string answer;
     public int index;
     public float typingSpeed;
+    public float fastTypingSpeed;
+    public float currentTypingSpeed;
     public TMP_InputField inputField;
     public GameObject inputVisible;
     public bool hasTextField;
@@ -32,10 +34,11 @@ public class Dialog : MonoBehaviour
 
     public IEnumerator Type()
     {
+        currentTypingSpeed = typingSpeed;
         foreach(char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(currentTypingSpeed);
         }
     }
 

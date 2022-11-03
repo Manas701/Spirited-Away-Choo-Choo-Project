@@ -48,6 +48,10 @@ public class InteractableObject : MonoBehaviour
                     p.canMove = true;
                 }
             }
+            else
+            {
+                d.currentTypingSpeed = d.fastTypingSpeed;
+            }
         }
     }
 
