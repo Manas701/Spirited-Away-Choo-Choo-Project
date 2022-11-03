@@ -51,7 +51,7 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         //Compares the tag of the object entering this collider.
         if(other.gameObject.tag == "Player")
@@ -60,7 +60,7 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         //compares the tag of the object exiting this collider.
         if(other.gameObject.tag == "Player")
