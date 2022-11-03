@@ -8,8 +8,27 @@ public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
+    public string answer;
     public int index;
     public float typingSpeed;
+    public TMP_InputField inputField;
+    public GameObject inputVisible;
+    public bool hasTextField;
+    public int sentenceBeforeTextField;
+    public int sentenceBeforeWrongResponse;
+    private bool answerCorrect = false;
+    private bool hasResponded = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        inputVisible.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
     public IEnumerator Type()
     {
@@ -20,28 +39,50 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    public void endInputField(string s)
+    {
+        if (s == answer)
+        {
+            answerCorrect = true;
+        }
+        hasResponded = true;
+        inputVisible.SetActive(false);
+        inputField.DeactivateInputField();
+        inputField.text = "";
+        NextSentence();
+    }
+
+    // public void TextField()
+    // {
+    //     pass;
+    // }
+
     public void NextSentence()
     {
-        textDisplay.text = "";
-        if (index < sentences.Length - 1)
+        if (!hasResponded && hasTextField && (index ==  sentenceBeforeTextField - 1))
         {
-            index++;
-            StartCoroutine(Type());
+            inputVisible.SetActive(true);
+            inputField.ActivateInputField();
         }
         else
         {
-            sentences = new string[0];
-            index = 0;
+            textDisplay.text = "";
+            if (index < sentences.Length - 1 && !(hasResponded && (index == sentenceBeforeWrongResponse - 1) && answerCorrect))
+            {
+                index++;
+                if (hasTextField && hasResponded && !answerCorrect && (index == sentenceBeforeTextField))
+                {
+                    index = sentenceBeforeWrongResponse;
+                }
+                StartCoroutine(Type());
+            }
+            else
+            {
+                sentences = new string[0];
+                index = 0;
+                hasResponded = false;
+                answerCorrect = false;
+            }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

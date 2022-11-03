@@ -6,10 +6,15 @@ public class InteractableObject : MonoBehaviour
 {
 
     //Flag used to tell if the object can be interacted with or not.
-    public bool isInteractable = false;
+    private bool isInteractable = false;
     public string[] iSentences;
+    public string answer;
+    public bool hasTextField;
+    public int sentenceBeforeTextField;
+    public int sentenceBeforeWrongResponse;
     private GameObject dialog;
     private GameObject player;
+    private Dialog d;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +34,10 @@ public class InteractableObject : MonoBehaviour
             {
                 p.canMove = false;
                 d.sentences = iSentences;
+                d.hasTextField = hasTextField;
+                d.sentenceBeforeTextField = sentenceBeforeTextField;
+                d.sentenceBeforeWrongResponse = sentenceBeforeWrongResponse;
+                d.answer = answer;
                 StartCoroutine(d.Type());
             }
             else if ((d.textDisplay.text == d.sentences[d.index]))
@@ -42,7 +51,7 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         //Compares the tag of the object entering this collider.
         if(other.gameObject.tag == "Player")
@@ -51,7 +60,7 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         //compares the tag of the object exiting this collider.
         if(other.gameObject.tag == "Player")
