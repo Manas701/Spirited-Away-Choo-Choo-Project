@@ -92,6 +92,14 @@ public class Dialog : MonoBehaviour
             {
                 sentences = new string[0];
                 index = 0;
+                if (hasResponded && answerCorrect)
+                {
+                    // fade black
+
+                    // destroy object
+
+                    // unfade black
+                }
                 hasResponded = false;
                 answerCorrect = false;
                 talking = null;
