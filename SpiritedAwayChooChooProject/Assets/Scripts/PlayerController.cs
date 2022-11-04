@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed;
     public float runSpeed;
 
+    public float trainFloorY;
     public bool canMove;
 
     // Start is called before the first frame update
@@ -26,8 +27,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // The sit/stand "Solution"
-        if(transform.position.y > 0.94776){
-            transform.position = new Vector3(transform.position.x, 0.94775f,transform.position.z);
+        if(transform.position.y > (trainFloorY + 0.00001f)){
+            transform.position = new Vector3(transform.position.x, trainFloorY,transform.position.z);
         }
 
         //Horizontal Rotation

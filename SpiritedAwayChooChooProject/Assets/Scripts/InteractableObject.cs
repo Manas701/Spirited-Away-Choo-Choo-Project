@@ -32,6 +32,7 @@ public class InteractableObject : MonoBehaviour
         //Checks if the player is in the collider and also if the key is pressed.
         if(isInteractable && Input.GetKeyDown(KeyCode.Space))
         {
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             if (this.gameObject.tag == "Ghost")
             {
                 d.talking = talkingClips[Random.Range(0, talkingClips.Count)];
