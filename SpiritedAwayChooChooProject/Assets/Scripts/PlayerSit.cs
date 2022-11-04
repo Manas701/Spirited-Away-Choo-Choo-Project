@@ -19,6 +19,7 @@ public class PlayerSit : MonoBehaviour
     public float unsitRotX;
     public float unsitRotY;
     public float unsitRotZ;
+    public float tweenTime;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +46,8 @@ public class PlayerSit : MonoBehaviour
 
     public void Sit()
     {
-        print("sitting");
         //move the player down and facing the window, kill movement
-        player.transform.position = new Vector3(sitPosX, sitPosY, sitPosZ);
+        LeanTween.move(player, new Vector3(sitPosX, sitPosY, sitPosZ), tweenTime);
         player.transform.Rotate(new Vector3(sitRotX, sitRotY, sitRotZ));
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody>().useGravity = false;
@@ -58,9 +58,8 @@ public class PlayerSit : MonoBehaviour
 
     public void Unsit()
     {
-        print("unsitting");
-        //move the player down and facing the window, kill movement
-        player.transform.position = new Vector3(unsitPosX, unsitPosY, unsitPosZ);
+        //move the player up and still facing the window, unkill movement
+        LeanTween.move(player, new Vector3(unsitPosX, unsitPosY, unsitPosZ), tweenTime);
         player.transform.Rotate(new Vector3(unsitRotX, unsitRotY, unsitRotZ));
         player.GetComponent<Rigidbody>().useGravity = true;
         player.GetComponent<Collider>().isTrigger = false;
