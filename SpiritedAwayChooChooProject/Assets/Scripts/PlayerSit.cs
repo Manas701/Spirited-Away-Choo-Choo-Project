@@ -24,7 +24,7 @@ public class PlayerSit : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Capsule");
-        //Sit();
+        Sit();
     }
 
     // Update is called once per frame
@@ -45,6 +45,7 @@ public class PlayerSit : MonoBehaviour
 
     public void Sit()
     {
+        print("sitting");
         //move the player down and facing the window, kill movement
         player.transform.position = new Vector3(sitPosX, sitPosY, sitPosZ);
         player.transform.Rotate(new Vector3(sitRotX, sitRotY, sitRotZ));
@@ -57,6 +58,7 @@ public class PlayerSit : MonoBehaviour
 
     public void Unsit()
     {
+        print("unsitting");
         //move the player down and facing the window, kill movement
         player.transform.position = new Vector3(unsitPosX, unsitPosY, unsitPosZ);
         player.transform.Rotate(new Vector3(unsitRotX, unsitRotY, unsitRotZ));
