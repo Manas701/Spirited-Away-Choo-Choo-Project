@@ -20,10 +20,13 @@ public class Dialog : MonoBehaviour
     public int sentenceBeforeWrongResponse;
     private bool answerCorrect = false;
     private bool hasResponded = false;
+    public AudioSource audioSource;
+    public AudioClip talking;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GameObject.Find("Talking Audio").GetComponent<AudioSource>();
         inputVisible.SetActive(false);
     }
 
@@ -34,6 +37,12 @@ public class Dialog : MonoBehaviour
 
     public IEnumerator Type()
     {
+        if (talking != null)
+        {
+            audioSource.clip = talking;
+            audioSource.Play();
+        }
+        talking = null;
         currentTypingSpeed = typingSpeed;
         foreach(char letter in sentences[index].ToCharArray())
         {
@@ -85,6 +94,7 @@ public class Dialog : MonoBehaviour
                 index = 0;
                 hasResponded = false;
                 answerCorrect = false;
+                talking = null;
             }
         }
     }
