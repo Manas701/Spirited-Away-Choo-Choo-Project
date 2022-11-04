@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // The sit/stand "Solution"
+        if(transform.position.y > 0.94776){
+            transform.position = new Vector3(transform.position.x, 0.94775f,transform.position.z);
+        }
+
         //Horizontal Rotation
         transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);
     }
