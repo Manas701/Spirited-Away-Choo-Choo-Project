@@ -22,10 +22,12 @@ public class Dialog : MonoBehaviour
     private bool hasResponded = false;
     public AudioSource audioSource;
     public AudioClip talking;
+    private Fade blackOut;
 
     // Start is called before the first frame update
     void Start()
     {
+        blackOut = GameObject.Find("SphereOfDoom").GetComponent<Fade>();
         audioSource = GameObject.Find("Talking Audio").GetComponent<AudioSource>();
         inputVisible.SetActive(false);
     }
@@ -95,10 +97,11 @@ public class Dialog : MonoBehaviour
                 if (hasResponded && answerCorrect)
                 {
                     // fade black
-
+                    blackOut.FadeBlack();
                     // destroy object
-
+                    print("it's time to die");
                     // unfade black
+                    //blackOut.UnfadeBlack();
                 }
                 hasResponded = false;
                 answerCorrect = false;
