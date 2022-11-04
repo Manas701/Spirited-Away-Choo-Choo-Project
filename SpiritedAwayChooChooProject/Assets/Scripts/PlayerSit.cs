@@ -25,8 +25,13 @@ public class PlayerSit : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Capsule");
-        Sit();
-    }
+        player.transform.position = new Vector3(sitPosX, sitPosY, sitPosZ);
+        player.transform.Rotate(new Vector3(sitRotX, sitRotY, sitRotZ));
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.GetComponent<Rigidbody>().useGravity = false;
+        player.GetComponent<Collider>().isTrigger = true;
+        player.GetComponent<PlayerController>().canMove = false;
+        isSitting = true;    }
 
     // Update is called once per frame
     void Update()
