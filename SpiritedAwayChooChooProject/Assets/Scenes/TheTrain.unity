@@ -754,6 +754,7 @@ MonoBehaviour:
   hasTextField: 1
   sentenceBeforeTextField: 3
   sentenceBeforeWrongResponse: 5
+  canTrueMove: 1
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -2047,6 +2048,7 @@ MonoBehaviour:
   hasTextField: 0
   sentenceBeforeTextField: 0
   sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
   talkingClips: []
 --- !u!135 &848054339
 SphereCollider:
@@ -3448,7 +3450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &2085448711
 SphereCollider:
   m_ObjectHideFlags: 0
