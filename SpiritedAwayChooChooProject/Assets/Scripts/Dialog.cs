@@ -23,11 +23,15 @@ public class Dialog : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip talking;
     private Fade blackOut;
+    public GameObject caller;
+    public float fadedTime;
+    private PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
-        blackOut = GameObject.Find("SphereOfDoom").GetComponent<Fade>();
+        player = GameObject.Find("Capsule").GetComponent<PlayerController>();
+        blackOut = GameObject.Find("PlaneOfDoom").GetComponent<Fade>();
         audioSource = GameObject.Find("Talking Audio").GetComponent<AudioSource>();
         inputVisible.SetActive(false);
     }
@@ -96,17 +100,25 @@ public class Dialog : MonoBehaviour
                 index = 0;
                 if (hasResponded && answerCorrect)
                 {
-                    // fade black
-                    blackOut.FadeBlack();
-                    // destroy object
-                    print("it's time to die");
-                    // unfade black
-                    //blackOut.UnfadeBlack();
+                    StartCoroutine(QuestEnd());
                 }
                 hasResponded = false;
                 answerCorrect = false;
                 talking = null;
             }
         }
+    }
+
+    IEnumerator QuestEnd()
+    {
+        blackOut.FadeBlack();
+        caller.transform.GetChild(0).gameObject.GetComponent<InteractableObject>().canTrueMove = false;
+        caller.transform.GetChild(0).gameObject.SetActive(false);
+        Destroy(caller.transform.GetChild(0).gameObject);
+        player.canMove = false;
+        yield return new WaitForSeconds(blackOut.fadeTime+fadedTime);
+        Destroy(caller);
+        blackOut.UnfadeBlack();
+        player.canMove = true;
     }
 }

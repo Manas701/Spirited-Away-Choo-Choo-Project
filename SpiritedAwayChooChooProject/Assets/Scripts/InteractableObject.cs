@@ -15,6 +15,7 @@ public class InteractableObject : MonoBehaviour
     private GameObject dialog;
     private GameObject player;
     private Dialog d;
+    public bool canTrueMove = true;
 
     public List<AudioClip> talkingClips;
 
@@ -33,8 +34,9 @@ public class InteractableObject : MonoBehaviour
         if(isInteractable && Input.GetKeyDown(KeyCode.Space))
         {
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            if (this.gameObject.tag == "Ghost")
+            if (gameObject.tag == "Ghost")
             {
+                d.caller = gameObject.transform.parent.gameObject;
                 d.talking = talkingClips[Random.Range(0, talkingClips.Count)];
             }
             if (d.sentences.Length == 0)
@@ -50,10 +52,12 @@ public class InteractableObject : MonoBehaviour
             else if ((d.textDisplay.text == d.sentences[d.index]))
             {
                 d.NextSentence();
-                if (d.index == d.sentences.Length)
+                if (d.index == d.sentences.Length && canTrueMove == true)
                 {
                     p.canMove = true;
+                    print("currently trueing canMove");
                 }
+                canTrueMove = true;
             }
             else
             {

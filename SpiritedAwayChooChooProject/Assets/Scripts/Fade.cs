@@ -21,12 +21,12 @@ public class Fade : MonoBehaviour
 
     public void FadeBlack()
     {
-        LeanTween.alpha(this.gameObject, 1f, fadeTime);
-        print("fading to black");
+        LeanTween.alpha(gameObject, 1f, fadeTime);
+
     }
 
     public void UnfadeBlack()
     {
-        LeanTween.alpha(this.gameObject, 0f, fadeTime);
+        LeanTween.alpha(gameObject, 0f, fadeTime);
     }
 }
