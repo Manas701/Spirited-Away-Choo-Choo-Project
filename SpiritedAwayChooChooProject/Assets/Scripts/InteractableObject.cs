@@ -66,9 +66,9 @@ public class InteractableObject : MonoBehaviour
             {
                 takenInteraction = true;
                 player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                d.caller = gameObject.transform.parent.gameObject;
                 if (gameObject.transform.parent.gameObject.tag == "Ghost")
                 {
-                    d.caller = gameObject.transform.parent.gameObject;
                     d.talking = talkingClips[Random.Range(0, talkingClips.Count)];
                 }
                 if (d.sentences.Length == 0)

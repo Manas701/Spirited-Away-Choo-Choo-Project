@@ -26,6 +26,7 @@ public class Dialog : MonoBehaviour
     public GameObject caller;
     public float fadedTime;
     private PlayerController player;
+    private GameObject obj;
 
     // Start is called before the first frame update
     void Start()
@@ -112,13 +113,22 @@ public class Dialog : MonoBehaviour
     public IEnumerator QuestEnd()
     {
         blackOut.FadeBlack();
-        caller.transform.GetChild(0).gameObject.GetComponent<InteractableObject>().canTrueMove = false;
-        caller.transform.GetChild(0).gameObject.SetActive(false);
-        Destroy(caller.transform.GetChild(0).gameObject);
+        for (int i = 0; i < caller.transform.childCount; i++)
+        {
+            obj = caller.transform.GetChild(i).gameObject;
+            if (obj.tag == "Interact")
+            {
+                break;
+            }
+        }
+        obj.gameObject.GetComponent<InteractableObject>().canTrueMove = false;
+        obj.gameObject.SetActive(false);
+        Destroy(obj.gameObject);
         player.canMove = false;
         yield return new WaitForSeconds(blackOut.fadeTime+fadedTime);
         Destroy(caller);
         blackOut.UnfadeBlack();
         player.canMove = true;
+        obj = null;
     }
 }
