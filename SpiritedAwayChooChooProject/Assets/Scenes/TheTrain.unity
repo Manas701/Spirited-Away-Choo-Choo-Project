@@ -3220,13 +3220,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   isSitting: 0
-  sitPosX: 8.993
+  sitPosX: 9.555
   sitPosY: 0.679
   sitPosZ: -3.487
   sitRotX: 0
   sitRotY: -1.559
   sitRotZ: 0
-  unsitPosX: 8.993
+  unsitPosX: 9.555
   unsitPosY: 0.938
   unsitPosZ: -4.265
   unsitRotX: 0
@@ -4682,7 +4682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001587917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.993, y: 0.867, z: -4.265}
+  m_LocalPosition: {x: 9.555, y: 0.867, z: -4.265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
