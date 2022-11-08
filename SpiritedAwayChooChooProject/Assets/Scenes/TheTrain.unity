@@ -174,9 +174,9 @@ MonoBehaviour:
   - I cannot get off this train until I find it.
   - Do you know my name?
   - 'Yoshinori: Oh, thank you so much! I remember now!'
-  - I can finally leave this train!
-  - '???: I don''t remember that being it...'
-  - I guess I will have to stay here forever.
+  - I can finally end this long, long journey.
+  - '???: I''m sorry, but I don''t remember that being it...'
+  - I guess I will have to stay here a little while longer.
   answer: Yoshinori
   hasTextField: 1
   sentenceBeforeTextField: 3
@@ -311,27 +311,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.34
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.34
+      value: 0.21999998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.34
+      value: 0.21999998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.52
+      value: -14.138
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.243
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.893
+      value: 1.348
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
       propertyPath: m_LocalRotation.w
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sitAmount: 10
   newSentences:
-  - Thank you so much, child.
+  - 'Torakichi: Thank you so much, child.'
   - You have no idea how much this means to me.
   - I hope you have a safe and happy life.
 --- !u!1 &228988349
@@ -2552,7 +2552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844191863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1, z: -3.47}
   m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4070,7 +4070,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   iSentences:
-  - 'Conductor: This train reached its first stop at Spirit Bathhouse.'
+  - 'Conductor: Greetings, traveler. It''s important that you remember your stop.'
+  - This train reached its first stop at Spirit Bathhouse.
   - We then passed Ocean Village, Rippling Port, and Arbor Grove.
   - The stops after that are Sunset Bush, Swamp Bottom, and Willow Heights.
   - We will finally stop at the Neon Lights.
