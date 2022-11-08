@@ -18,6 +18,8 @@ public class InteractableObject : MonoBehaviour
     public bool canTrueMove = true;
     private bool subInteractable = false;
     public bool justEnded = false;
+    public bool takenInteraction = false;
+    private bool cantInteract = false;
 
     public List<AudioClip> talkingClips;
 
@@ -30,11 +32,11 @@ public class InteractableObject : MonoBehaviour
 
     void Update()
     {
-        if (justEnded == true)
-        {
-            justEnded = false;
-        }
+        cantInteract = false;
+        justEnded = false;
+        takenInteraction = false;
         subInteractable = false;
+
         if (gameObject.transform.parent.gameObject.transform.childCount > 1)
         {
             if (gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject.tag == "Sit")
@@ -47,34 +49,52 @@ public class InteractableObject : MonoBehaviour
         }
         Dialog d = dialog.GetComponent<Dialog>();
         PlayerController p = player.GetComponent<PlayerController>();
+
+        GameObject[] iSpheres = GameObject.FindGameObjectsWithTag("Interact");
+        foreach (GameObject i in iSpheres)
+        {
+            if (i.GetComponent<InteractableObject>().takenInteraction == true)
+            {
+                cantInteract = true;
+            }
+        }
+
         //Checks if the player is in the collider and also if the key is pressed.
         if(isInteractable && Input.GetKeyDown(KeyCode.Space) && !subInteractable)
         {
-            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            if (gameObject.tag == "Ghost")
+            if (!cantInteract)
             {
-                d.caller = gameObject.transform.parent.gameObject;
-                d.talking = talkingClips[Random.Range(0, talkingClips.Count)];
-            }
-            if (d.sentences.Length == 0)
-            {
-                p.canMove = false;
-                d.sentences = iSentences;
-                d.hasTextField = hasTextField;
-                d.sentenceBeforeTextField = sentenceBeforeTextField;
-                d.sentenceBeforeWrongResponse = sentenceBeforeWrongResponse;
-                d.answer = answer;
-                StartCoroutine(d.Type());
-            }
-            else if ((d.textDisplay.text == d.sentences[d.index]))
-            {
-                d.NextSentence();
-                if (d.index == d.sentences.Length && canTrueMove == true)
+                takenInteraction = true;
+                player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                if (gameObject.transform.parent.gameObject.tag == "Ghost")
                 {
-                    p.canMove = true;
-                    justEnded = true;
+                    d.caller = gameObject.transform.parent.gameObject;
+                    d.talking = talkingClips[Random.Range(0, talkingClips.Count)];
                 }
-                canTrueMove = true;
+                if (d.sentences.Length == 0)
+                {
+                    p.canMove = false;
+                    d.sentences = iSentences;
+                    d.hasTextField = hasTextField;
+                    d.sentenceBeforeTextField = sentenceBeforeTextField;
+                    d.sentenceBeforeWrongResponse = sentenceBeforeWrongResponse;
+                    d.answer = answer;
+                    StartCoroutine(d.Type());
+                }
+                else if ((d.textDisplay.text == d.sentences[d.index]))
+                {
+                    d.NextSentence();
+                    if (d.index == d.sentences.Length && canTrueMove == true)
+                    {
+                        p.canMove = true;
+                        justEnded = true;
+                    }
+                    canTrueMove = true;
+                }
+                else
+                {
+                    d.currentTypingSpeed = d.fastTypingSpeed;
+                }
             }
             else
             {

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ghost
   - Sit
+  - Interact
   layers:
   - Default
   - TransparentFX
