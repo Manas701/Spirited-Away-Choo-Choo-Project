@@ -55,7 +55,6 @@ public class InteractableObject : MonoBehaviour
                 if (d.index == d.sentences.Length && canTrueMove == true)
                 {
                     p.canMove = true;
-                    print("currently trueing canMove");
                 }
                 canTrueMove = true;
             }
