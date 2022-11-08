@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.080315895, g: 0.099710934, b: 0.30111977, a: 1}
+  m_IndirectSpecularColor: {r: 0.08050765, g: 0.09989585, b: 0.3011924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,7 +184,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -285,7 +284,6 @@ MonoBehaviour:
   talking: {fileID: 0}
   caller: {fileID: 0}
   fadedTime: 1
-  animator: {fileID: 1328697316}
 --- !u!4 &119160649
 Transform:
   m_ObjectHideFlags: 0
@@ -359,7 +357,6 @@ MonoBehaviour:
   canTrueMove: 0
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -778,7 +775,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 155}
-  m_SizeDelta: {x: 320, y: 60}
+  m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243841275
 MonoBehaviour:
@@ -1082,7 +1079,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -1198,7 +1194,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1328697313}
+  - {fileID: 1990852094}
   - {fileID: 243841274}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1579,7 +1575,6 @@ MonoBehaviour:
   canTrueMove: 0
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -1874,8 +1869,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9a958095a72e6f740a7bace7aa9cf834, type: 2}
-  m_sharedMaterial: {fileID: 1299799374649463222, guid: 9a958095a72e6f740a7bace7aa9cf834, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1899,15 +1894,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2894,7 +2889,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
   talkingClips: []
 --- !u!135 &817343069
 SphereCollider:
@@ -3061,7 +3055,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
   talkingClips: []
 --- !u!135 &844191866
 SphereCollider:
@@ -3647,104 +3640,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.53
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1328697312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1328697313}
-  - component: {fileID: 1328697315}
-  - component: {fileID: 1328697314}
-  - component: {fileID: 1328697316}
-  m_Layer: 5
-  m_Name: DialogueBackground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1328697313
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328697312}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -19}
-  m_LocalScale: {x: 0.83776, y: 0.97087, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1990852094}
-  m_Father: {fileID: 365874108}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00005086263, y: -293.00003}
-  m_SizeDelta: {x: 1939, y: 345}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1328697314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328697312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6cfe34eaa8a475d41839bbea7ade867e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1328697315
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328697312}
-  m_CullTransparentMesh: 1
---- !u!95 &1328697316
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328697312}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7fa567b2166a865469aad1b5f23c3d83, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1445719513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,7 +3696,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
   talkingClips: []
 --- !u!135 &1445719516
 SphereCollider:
@@ -4458,7 +4352,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -4561,7 +4454,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
   talkingClips: []
 --- !u!135 &1804184024
 SphereCollider:
@@ -4731,7 +4623,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -5099,17 +4990,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990852093}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1936594, y: 1.030004, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1328697313}
+  m_Father: {fileID: 365874108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 969.5, y: -23}
+  m_AnchoredPosition: {x: 800, y: -270}
   m_SizeDelta: {x: 1600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990852095
@@ -5134,15 +5025,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9a958095a72e6f740a7bace7aa9cf834, type: 2}
-  m_sharedMaterial: {fileID: 1299799374649463222, guid: 9a958095a72e6f740a7bace7aa9cf834, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.7735849, g: 0.31016377, b: 0.3737707, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5159,14 +5050,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5401,7 +5292,6 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
   talkingClips: []
 --- !u!135 &2008715376
 SphereCollider:

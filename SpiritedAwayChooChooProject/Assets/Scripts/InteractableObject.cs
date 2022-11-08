@@ -20,7 +20,6 @@ public class InteractableObject : MonoBehaviour
     public bool justEnded = false;
     public bool takenInteraction = false;
     private bool cantInteract = false;
-    public Animator animator;
 
     public List<AudioClip> talkingClips;
 
@@ -74,7 +73,6 @@ public class InteractableObject : MonoBehaviour
                 }
                 if (d.sentences.Length == 0)
                 {
-                    animator.SetBool("isOpen", true);
                     p.canMove = false;
                     d.sentences = iSentences;
                     d.hasTextField = hasTextField;
@@ -88,7 +86,6 @@ public class InteractableObject : MonoBehaviour
                     d.NextSentence();
                     if (d.index == d.sentences.Length && canTrueMove == true)
                     {
-                        animator.SetBool("isOpen", false);
                         p.canMove = true;
                         justEnded = true;
                     }
