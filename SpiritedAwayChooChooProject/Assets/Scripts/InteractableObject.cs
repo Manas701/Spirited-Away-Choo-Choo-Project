@@ -6,7 +6,7 @@ public class InteractableObject : MonoBehaviour
 {
 
     //Flag used to tell if the object can be interacted with or not.
-    private bool isInteractable = false;
+    public bool isInteractable = false;
     public string[] iSentences;
     public string answer;
     public bool hasTextField;
@@ -16,6 +16,8 @@ public class InteractableObject : MonoBehaviour
     private GameObject player;
     private Dialog d;
     public bool canTrueMove = true;
+    private bool subInteractable = false;
+    public bool justEnded = false;
 
     public List<AudioClip> talkingClips;
 
@@ -28,10 +30,25 @@ public class InteractableObject : MonoBehaviour
 
     void Update()
     {
+        if (justEnded == true)
+        {
+            justEnded = false;
+        }
+        subInteractable = false;
+        if (gameObject.transform.parent.gameObject.transform.childCount > 1)
+        {
+            if (gameObject.transform.parent.gameObject.transform.GetChild(1).gameObject.tag == "Sit")
+            {
+                if (gameObject.transform.parent.gameObject.transform.GetChild(1).GetComponent<PlayerSit>().isInteractable == true)
+                {
+                    subInteractable = true;
+                }
+            }
+        }
         Dialog d = dialog.GetComponent<Dialog>();
         PlayerController p = player.GetComponent<PlayerController>();
         //Checks if the player is in the collider and also if the key is pressed.
-        if(isInteractable && Input.GetKeyDown(KeyCode.Space))
+        if(isInteractable && Input.GetKeyDown(KeyCode.Space) && !subInteractable)
         {
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             if (gameObject.tag == "Ghost")
@@ -55,6 +72,7 @@ public class InteractableObject : MonoBehaviour
                 if (d.index == d.sentences.Length && canTrueMove == true)
                 {
                     p.canMove = true;
+                    justEnded = true;
                 }
                 canTrueMove = true;
             }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSit : MonoBehaviour
 {
-    private bool isInteractable = true;
+    public bool isInteractable = false;
     public bool isSitting = false;
     private GameObject player;
     public float sitPosX;
@@ -20,6 +20,7 @@ public class PlayerSit : MonoBehaviour
     public float unsitRotY;
     public float unsitRotZ;
     public float tweenTime;
+    public float sittingTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class PlayerSit : MonoBehaviour
         player.GetComponent<Rigidbody>().useGravity = false;
         player.GetComponent<Collider>().isTrigger = true;
         player.GetComponent<PlayerController>().canMove = false;
-        isSitting = true;    }
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,6 +47,14 @@ public class PlayerSit : MonoBehaviour
             {
                 Sit();
             }
+        }
+        if (isSitting)
+        {
+            sittingTime += Time.deltaTime;
+        }
+        else
+        {
+            sittingTime = 0f;
         }
     }
 

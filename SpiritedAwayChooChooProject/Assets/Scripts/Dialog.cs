@@ -109,7 +109,7 @@ public class Dialog : MonoBehaviour
         }
     }
 
-    IEnumerator QuestEnd()
+    public IEnumerator QuestEnd()
     {
         blackOut.FadeBlack();
         caller.transform.GetChild(0).gameObject.GetComponent<InteractableObject>().canTrueMove = false;
