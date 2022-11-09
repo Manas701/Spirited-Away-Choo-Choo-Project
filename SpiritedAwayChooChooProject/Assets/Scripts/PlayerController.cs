@@ -33,6 +33,19 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, trainFloorY,transform.position.z);
         }
 
+        if (rb.velocity != Vector3.zero)
+        {
+            if (walker.clip == null)
+            {
+                walker.clip = walk;
+                walker.Play();
+            }
+        }
+        else
+        {
+            walker.clip = null;
+        }
+
         //Horizontal Rotation
         transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);
     }
