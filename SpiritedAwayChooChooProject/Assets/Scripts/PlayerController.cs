@@ -40,7 +40,8 @@ public class PlayerController : MonoBehaviour
         if (canMove)
         {
             Vector3 newVelocity = Vector3.up * rb.velocity.y;
-            float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+            // float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+            float speed = walkSpeed;
             newVelocity.x = Input.GetAxis("Horizontal") * speed;
             newVelocity.z = Input.GetAxis("Vertical") * speed;
             rb.velocity = transform.TransformDirection(newVelocity);
