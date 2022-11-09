@@ -94,7 +94,7 @@ public class PlayerSit : MonoBehaviour
     public void Sit()
     {
         //move the player down and facing the window, kill movement
-        LeanTween.move(player, new Vector3(sitPosX, sitPosY, sitPosZ), tweenTime);
+        LeanTween.move(player, new Vector3(sitPosX, sitPosY, sitPosZ), tweenTime).setEase(LeanTweenType.easeInOutCubic);
         player.transform.Rotate(new Vector3(sitRotX, sitRotY, sitRotZ));
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody>().useGravity = false;
@@ -106,7 +106,7 @@ public class PlayerSit : MonoBehaviour
     public void Unsit()
     {
         //move the player up and still facing the window, unkill movement
-        LeanTween.move(player, new Vector3(unsitPosX, unsitPosY, unsitPosZ), tweenTime);
+        LeanTween.move(player, new Vector3(unsitPosX, unsitPosY, unsitPosZ), tweenTime).setEase(LeanTweenType.easeInOutCubic);
         player.transform.Rotate(new Vector3(unsitRotX, unsitRotY, unsitRotZ));
         player.GetComponent<Rigidbody>().useGravity = true;
         player.GetComponent<Collider>().isTrigger = false;
