@@ -61,7 +61,7 @@ public class Dialog : MonoBehaviour
 
     public void endInputField(string s)
     {
-        if (s == answer)
+        if (s.ToLower().Replace(" ", "") == answer)
         {
             answerCorrect = true;
         }

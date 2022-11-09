@@ -37,7 +37,10 @@ public class PlayerSit : MonoBehaviour
     {
         player = GameObject.Find("Capsule");
         neonSigns = GameObject.Find("Neon_Signs");
-        neonSigns.SetActive(false);
+        if (neonSigns != null)
+        {
+            neonSigns.SetActive(false);
+        }
         if (isSitting)
         {
             player.transform.position = new Vector3(sitPosX, sitPosY, sitPosZ);
