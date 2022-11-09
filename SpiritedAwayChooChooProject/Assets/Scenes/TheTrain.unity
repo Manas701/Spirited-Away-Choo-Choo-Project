@@ -177,7 +177,7 @@ MonoBehaviour:
   - I can finally end this long, long journey.
   - '???: I''m sorry, but I don''t remember that being it...'
   - I guess I will have to stay here a little while longer.
-  answer: Yoshinori
+  answer: yoshinori
   hasTextField: 1
   sentenceBeforeTextField: 3
   sentenceBeforeWrongResponse: 5
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   - Thank you. I'll take my leave now.
   - 'Eijiro: Hmmm, that doesn''t sound familiar.'
   - Might that be a different stop?
-  answer: Swamp Bottom
+  answer: swampbottom
   hasTextField: 1
   sentenceBeforeTextField: 3
   sentenceBeforeWrongResponse: 6
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   - I see my stop now, but thank you for your troubles.
   - Hmmmm, I don't believe they sold that at all.
   - Please do let me know if you recall it, though.
-  answer: Pufferfish
+  answer: pufferfish
   hasTextField: 1
   sentenceBeforeTextField: 5
   sentenceBeforeWrongResponse: 8
