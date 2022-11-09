@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07012389, g: 0.040749047, b: 0.1492252, a: 1}
+  m_IndirectSpecularColor: {r: 0.07012285, g: 0.04074775, b: 0.14922398, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 206849789}
   - component: {fileID: 206849788}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RobertsSpecialLittleCubeMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8286dede018b142919fe2cb33630e0c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
