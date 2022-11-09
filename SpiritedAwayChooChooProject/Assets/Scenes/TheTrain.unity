@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.080315895, g: 0.099710934, b: 0.30111977, a: 1}
+  m_IndirectSpecularColor: {r: 0.08050765, g: 0.09989585, b: 0.3011924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -274,7 +274,7 @@ MonoBehaviour:
   answer: 
   index: 0
   typingSpeed: 0.05
-  fastTypingSpeed: 0.01
+  fastTypingSpeed: 0.001
   currentTypingSpeed: 0
   inputField: {fileID: 243841275}
   inputVisible: {fileID: 243841273}
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   iSentences:
-  - 'Itaro: Hello friend! Don''t tell that man over there, but I''m very excited.'
+  - 'Itaro: Hello friend! Don''t tell that man in the other car, but I''m very excited.'
   - See, he's my old friend Kumataro and it's his birthday tomorrow!
   - He's aging so I'm sure he's already forgotten.
   - ' I''m sitting here to surprise him when he gets home.'
@@ -359,7 +359,7 @@ MonoBehaviour:
   canTrueMove: 0
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -777,7 +777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 155}
+  m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243841275
@@ -2894,7 +2894,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &817343069
 SphereCollider:
@@ -3061,7 +3061,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &844191866
 SphereCollider:
@@ -3801,7 +3801,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &1445719516
 SphereCollider:
@@ -4561,7 +4561,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &1804184024
 SphereCollider:
@@ -5401,7 +5401,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &2008715376
 SphereCollider:
