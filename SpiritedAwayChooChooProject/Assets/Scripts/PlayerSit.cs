@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSit : MonoBehaviour
 {
@@ -26,6 +27,16 @@ public class PlayerSit : MonoBehaviour
     private bool creditsActivated = false;
     public float neonSpeed;
     private GameObject neonSigns;
+    private bool hasBeenDone = false;
+    public float indicatorTime;
+    private Image indicator;
+    public Sprite spacebar;
+    public Sprite spacebarPressed;
+    public float indicatorTweenTime;
+    private Color fixedColor;
+    private float pressTime = 0f;
+    private bool pressed = false;
+    public float pressTimeWait;
 
     // public GameObject[] Robert;
     // public GameObject[] Newlin;
@@ -37,6 +48,10 @@ public class PlayerSit : MonoBehaviour
     {
         player = GameObject.Find("Capsule");
         neonSigns = GameObject.Find("Neon_Signs");
+        indicator = GameObject.Find("Image").GetComponent<Image>();
+        fixedColor = indicator.color;
+        fixedColor.a = 0f;
+        indicator.color = fixedColor;
         if (neonSigns != null)
         {
             neonSigns.SetActive(false);
@@ -78,11 +93,42 @@ public class PlayerSit : MonoBehaviour
         if (isSitting)
         {
             sittingTime += Time.deltaTime;
+            if (hasBeenDone)
+            {
+                pressTime += Time.deltaTime;
+            }
+            if (!hasBeenDone && sittingTime >= indicatorTime)
+            {
+                if (fixedColor.a <= 1f)
+                {
+                    fixedColor.a += Time.deltaTime;
+                    indicator.color = fixedColor;
+                }
+                else
+                {
+                    hasBeenDone = true;
+                }
+            }
+            if (hasBeenDone && pressTime >= pressTimeWait)
+            {
+                if (!pressed)
+                {
+                    pressed = true;
+                    indicator.overrideSprite = spacebarPressed;
+                    pressTime = 0f;
+                }
+                else
+                {
+                    pressed = false;
+                    indicator.overrideSprite = null;
+                    pressTime = 0f;
+                }
+            }
             if (cantGetUp == true && creditsActivated == false)
             {
                 creditsActivated = true;
                 neonSigns.SetActive(true);
-                neonSigns.GetComponent<Rigidbody>().velocity = new Vector3 (neonSpeed, 0, 0);
+                neonSigns.GetComponent<Rigidbody>().velocity = new Vector3(neonSpeed, 0, 0);
             }
         }
         else
@@ -106,6 +152,8 @@ public class PlayerSit : MonoBehaviour
     public void Unsit()
     {
         //move the player up and still facing the window, unkill movement
+        hasBeenDone = true;
+        GameObject.Find("Image").SetActive(false);
         LeanTween.move(player, new Vector3(unsitPosX, unsitPosY, unsitPosZ), tweenTime).setEase(LeanTweenType.easeInOutCubic);
         player.transform.Rotate(new Vector3(unsitRotX, unsitRotY, unsitRotZ));
         player.GetComponent<Rigidbody>().useGravity = true;
