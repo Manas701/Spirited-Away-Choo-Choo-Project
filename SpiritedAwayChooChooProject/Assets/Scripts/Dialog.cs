@@ -27,6 +27,7 @@ public class Dialog : MonoBehaviour
     public float fadedTime;
     private PlayerController player;
     private GameObject obj;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +113,7 @@ public class Dialog : MonoBehaviour
 
     public IEnumerator QuestEnd()
     {
+        animator.SetBool("isOpen", false);
         blackOut.FadeBlack();
         for (int i = 0; i < caller.transform.childCount; i++)
         {
