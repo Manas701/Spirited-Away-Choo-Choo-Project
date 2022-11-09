@@ -22,11 +22,22 @@ public class PlayerSit : MonoBehaviour
     public float tweenTime;
     public float sittingTime = 0f;
     private int numGhosts;
+    private bool cantGetUp = false;
+    private bool creditsActivated = false;
+    public float neonSpeed;
+    private GameObject neonSigns;
+
+    // public GameObject[] Robert;
+    // public GameObject[] Newlin;
+    // public GameObject[] Michelle;
+    // public GameObject[] Huang;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Capsule");
+        neonSigns = GameObject.Find("Neon_Signs");
+        neonSigns.SetActive(false);
         if (isSitting)
         {
             player.transform.position = new Vector3(sitPosX, sitPosY, sitPosZ);
@@ -44,13 +55,17 @@ public class PlayerSit : MonoBehaviour
         numGhosts = GameObject.FindGameObjectsWithTag("Ghost").Length;
         if (numGhosts == 1)
         {
-            print("hi");
+            // Overlay glowing seat
+            cantGetUp = true;
         }
         if(isInteractable && Input.GetKeyDown(KeyCode.Space))
         {
             if (isSitting)
             {
-                Unsit();
+                if (cantGetUp == false)
+                {
+                    Unsit();
+                }
             }
             else
             {
@@ -60,6 +75,12 @@ public class PlayerSit : MonoBehaviour
         if (isSitting)
         {
             sittingTime += Time.deltaTime;
+            if (cantGetUp == true && creditsActivated == false)
+            {
+                creditsActivated = true;
+                neonSigns.SetActive(true);
+                neonSigns.GetComponent<Rigidbody>().velocity = new Vector3 (neonSpeed, 0, 0);
+            }
         }
         else
         {
