@@ -240,6 +240,92 @@ Transform:
   m_Father: {fileID: 2001587923}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &80074546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80074547}
+  - component: {fileID: 80074549}
+  - component: {fileID: 80074548}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80074547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80074546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 743051593}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &80074548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80074546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of some tasty-looking fish.
+  - It reads "Fresh Seafood - Fragrant Pufferfish".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &80074549
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80074546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &81346086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2036341029617558163, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &81346087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1276664584489733688, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &81346088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4604279988317087833, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &119160647
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +360,7 @@ MonoBehaviour:
   answer: 
   index: 0
   typingSpeed: 0.05
-  fastTypingSpeed: 0.001
+  fastTypingSpeed: 0.01
   currentTypingSpeed: 0
   inputField: {fileID: 243841275}
   inputVisible: {fileID: 243841273}
@@ -841,6 +927,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228988349}
   m_CullTransparentMesh: 1
+--- !u!1 &239859750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239859751}
+  - component: {fileID: 239859753}
+  - component: {fileID: 239859752}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &239859751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239859750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 743051594}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239859752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239859750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of a beautiful woman smoking a pipe.
+  - It reads "Love at First Sight".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &239859753
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239859750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &243722272
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +1046,7 @@ MonoBehaviour:
   isInteractable: 0
   iSentences:
   - A very long package.
-  - The name Otomatsu is written all over it.
+  - The name "Otomatsu" is written all over it.
   answer: Nothing
   hasTextField: 0
   sentenceBeforeTextField: 0
@@ -2689,6 +2846,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
   m_PrefabInstance: {fileID: 691330997}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &726971103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726971104}
+  - component: {fileID: 726971106}
+  - component: {fileID: 726971105}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726971104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726971103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 81346088}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726971105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726971103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of some Otori-Sama enjoying a bath.
+  - It reads "Come Visit!".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &726971106
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726971103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &743051591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3190,6 +3418,31 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 449fe621221fb754bb0db9bd1cba0506, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+--- !u!4 &743051592 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8405687072828986516, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &743051593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6767338809084888493, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &743051594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1655729834090300496, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &743051595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2668751686355858914, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &743051596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1372259238836350591, guid: ab7989fdce5d14d48a97228cf6cff059, type: 3}
+  m_PrefabInstance: {fileID: 743051591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &745985053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,7 +4040,7 @@ MonoBehaviour:
   isInteractable: 0
   iSentences:
   - An ordinary piece of luggage.
-  - The tag reads Yoshinori.
+  - The tag reads "Yoshinori".
   answer: Nothing
   hasTextField: 0
   sentenceBeforeTextField: 0
@@ -3809,6 +4062,290 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.24
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &888019058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888019059}
+  - component: {fileID: 888019061}
+  - component: {fileID: 888019060}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888019059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888019058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 743051595}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888019060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888019058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of a beautiful woman smoking a pipe.
+  - It reads "Love at First Sight".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &888019061
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888019058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &899104815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899104816}
+  - component: {fileID: 899104818}
+  - component: {fileID: 899104817}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899104816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899104815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 743051596}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899104817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899104815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of a boy and a girl.
+  - It seems like an advertisement for "Sea Rail Mail".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &899104818
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899104815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &981353144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981353145}
+  - component: {fileID: 981353147}
+  - component: {fileID: 981353146}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981353145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981353144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 743051592}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981353146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981353144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of some tasty-looking fish.
+  - It reads "Fresh Seafood - Fragrant Pufferfish".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &981353147
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981353144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &990096060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990096061}
+  - component: {fileID: 990096063}
+  - component: {fileID: 990096062}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990096061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990096060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 81346087}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990096062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990096060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of some Otori-Sama enjoying a bath.
+  - It reads "Come Visit!".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &990096063
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990096060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000171538
 GameObject:
@@ -4576,7 +5113,7 @@ MonoBehaviour:
   isInteractable: 0
   iSentences:
   - A disorganized pile of luggage.
-  - You can barely make out Eijiro on the tags.
+  - You can barely make out "Eijiro" on the tags.
   answer: Nothing
   hasTextField: 0
   sentenceBeforeTextField: 0
@@ -6116,8 +6653,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 36.4
+  m_fontSizeBase: 36.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6352,7 +6889,7 @@ MonoBehaviour:
   isInteractable: 0
   iSentences:
   - An sizable piece of luggage.
-  - The tag reads Torakichi.
+  - The tag reads "Torakichi".
   answer: Nothing
   hasTextField: 0
   sentenceBeforeTextField: 0
@@ -6560,6 +7097,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbd8e1870d242429c8de2bb0c433f910, type: 3}
+--- !u!1 &2080639553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080639554}
+  - component: {fileID: 2080639556}
+  - component: {fileID: 2080639555}
+  m_Layer: 0
+  m_Name: InteractSphere
+  m_TagString: Interact
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2080639554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080639553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.69, y: 1.69, z: 1.69}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 81346086}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2080639555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080639553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262827be32bbc4c57ada5254fe090877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 0
+  iSentences:
+  - A painting of a boy and a girl.
+  - It seems like an advertisement for "Sea Rail Mail".
+  answer: Nothing
+  hasTextField: 0
+  sentenceBeforeTextField: 0
+  sentenceBeforeWrongResponse: 0
+  canTrueMove: 1
+  justEnded: 0
+  takenInteraction: 0
+  animator: {fileID: 1328697316}
+  talkingClips: []
+--- !u!135 &2080639556
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080639553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2081190623
 PrefabInstance:
   m_ObjectHideFlags: 0
