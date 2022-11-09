@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     public float trainFloorY;
     public bool canMove;
+    public AudioSource walker;
+    public AudioClip walk;
 
     // Start is called before the first frame update
     void Start()
