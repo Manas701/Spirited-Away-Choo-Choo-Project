@@ -21,6 +21,7 @@ public class PlayerSit : MonoBehaviour
     public float unsitRotZ;
     public float tweenTime;
     public float sittingTime = 0f;
+    private int numGhosts;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,11 @@ public class PlayerSit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        numGhosts = GameObject.FindGameObjectsWithTag("Ghost").Length;
+        if (numGhosts == 1)
+        {
+            print("hi");
+        }
         if(isInteractable && Input.GetKeyDown(KeyCode.Space))
         {
             if (isSitting)
