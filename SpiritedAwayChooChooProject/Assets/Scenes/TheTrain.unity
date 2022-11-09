@@ -359,7 +359,7 @@ MonoBehaviour:
   canTrueMove: 0
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips:
   - {fileID: 8300000, guid: 049757c5e74d847caa8b36614c6d2433, type: 3}
   - {fileID: 8300000, guid: 87ce343ccdfe944e7b1c8a0b8c70e1fb, type: 3}
@@ -2894,7 +2894,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &817343069
 SphereCollider:
@@ -3801,7 +3801,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &1445719516
 SphereCollider:
@@ -4561,7 +4561,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &1804184024
 SphereCollider:
@@ -5401,7 +5401,7 @@ MonoBehaviour:
   canTrueMove: 1
   justEnded: 0
   takenInteraction: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1328697316}
   talkingClips: []
 --- !u!135 &2008715376
 SphereCollider:
