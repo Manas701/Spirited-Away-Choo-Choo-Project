@@ -37,6 +37,7 @@ public class PlayerSit : MonoBehaviour
     private float pressTime = 0f;
     private bool pressed = false;
     public float pressTimeWait;
+    private bool turnOffSpace = false;
 
     // public GameObject[] Robert;
     // public GameObject[] Newlin;
@@ -107,6 +108,7 @@ public class PlayerSit : MonoBehaviour
                 else
                 {
                     hasBeenDone = true;
+                    turnOffSpace = true;
                 }
             }
             if (hasBeenDone && pressTime >= pressTimeWait)
@@ -152,11 +154,12 @@ public class PlayerSit : MonoBehaviour
     public void Unsit()
     {
         //move the player up and still facing the window, unkill movement
-        if (!hasBeenDone)
+        if (turnOffSpace)
         {
             GameObject.Find("Image").SetActive(false);
         }
         hasBeenDone = true;
+        turnOffSpace = false;
         LeanTween.move(player, new Vector3(unsitPosX, unsitPosY, unsitPosZ), tweenTime).setEase(LeanTweenType.easeInOutCubic);
         player.transform.Rotate(new Vector3(unsitRotX, unsitRotY, unsitRotZ));
         player.GetComponent<Rigidbody>().useGravity = true;
