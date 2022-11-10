@@ -37,7 +37,7 @@ public class PlayerSit : MonoBehaviour
     private float pressTime = 0f;
     private bool pressed = false;
     public float pressTimeWait;
-    private bool turnOffSpace = false;
+    private bool turnOffSpace = true;
 
     // public GameObject[] Robert;
     // public GameObject[] Newlin;
@@ -94,36 +94,38 @@ public class PlayerSit : MonoBehaviour
         if (isSitting)
         {
             sittingTime += Time.deltaTime;
-            if (hasBeenDone)
+            if (turnOffSpace)
             {
-                pressTime += Time.deltaTime;
-            }
-            if (!hasBeenDone && sittingTime >= indicatorTime)
-            {
-                if (fixedColor.a <= 1f)
+                if (hasBeenDone)
                 {
-                    fixedColor.a += Time.deltaTime;
-                    indicator.color = fixedColor;
+                    pressTime += Time.deltaTime;
                 }
-                else
+                if (!hasBeenDone && sittingTime >= indicatorTime)
                 {
-                    hasBeenDone = true;
-                    turnOffSpace = true;
+                    if (fixedColor.a <= 1f)
+                    {
+                        fixedColor.a += Time.deltaTime;
+                        indicator.color = fixedColor;
+                    }
+                    else
+                    {
+                        hasBeenDone = true;
+                    }
                 }
-            }
-            if (hasBeenDone && pressTime >= pressTimeWait)
-            {
-                if (!pressed)
+                if (hasBeenDone && pressTime >= pressTimeWait)
                 {
-                    pressed = true;
-                    indicator.overrideSprite = spacebarPressed;
-                    pressTime = 0f;
-                }
-                else
-                {
-                    pressed = false;
-                    indicator.overrideSprite = null;
-                    pressTime = 0f;
+                    if (!pressed)
+                    {
+                        pressed = true;
+                        indicator.overrideSprite = spacebarPressed;
+                        pressTime = 0f;
+                    }
+                    else
+                    {
+                        pressed = false;
+                        indicator.overrideSprite = null;
+                        pressTime = 0f;
+                    }
                 }
             }
             if (cantGetUp == true && creditsActivated == false)
