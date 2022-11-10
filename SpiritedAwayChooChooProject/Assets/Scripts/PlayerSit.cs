@@ -152,8 +152,11 @@ public class PlayerSit : MonoBehaviour
     public void Unsit()
     {
         //move the player up and still facing the window, unkill movement
+        if (!hasBeenDone)
+        {
+            GameObject.Find("Image").SetActive(false);
+        }
         hasBeenDone = true;
-        GameObject.Find("Image").SetActive(false);
         LeanTween.move(player, new Vector3(unsitPosX, unsitPosY, unsitPosZ), tweenTime).setEase(LeanTweenType.easeInOutCubic);
         player.transform.Rotate(new Vector3(unsitRotX, unsitRotY, unsitRotZ));
         player.GetComponent<Rigidbody>().useGravity = true;
