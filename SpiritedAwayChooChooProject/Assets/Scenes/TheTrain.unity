@@ -4605,8 +4605,8 @@ MonoBehaviour:
   sittingTime: 0
   neonSpeed: -2.5
   indicatorTime: 5
-  spacebar: {fileID: 21300000, guid: 711333b9476aa4b9982407510de3e312, type: 3}
-  spacebarPressed: {fileID: 21300000, guid: 27a77d95fc6d548e2be1484be4d4ea5e, type: 3}
+  spacebar: {fileID: 21300000, guid: 723f7a56040c74d63beea4a06a91a380, type: 3}
+  spacebarPressed: {fileID: 21300000, guid: dba0c8867b52d4c6da348f1fe35537a1, type: 3}
   indicatorTweenTime: 1
   pressTimeWait: 1
 --- !u!1 &1029897494
@@ -4744,7 +4744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeMagnitude: 0.01
   shakeTimeMin: 10
-  shakeTimeMax: 1000
+  shakeTimeMax: 100
 --- !u!1001 &1124901824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5212,7 +5212,7 @@ RectTransform:
   m_GameObject: {fileID: 1444511812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 365874108}
@@ -5221,7 +5221,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 170}
-  m_SizeDelta: {x: 458, y: 180}
+  m_SizeDelta: {x: 1200, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444511814
 MonoBehaviour:
@@ -5243,7 +5243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 711333b9476aa4b9982407510de3e312, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 723f7a56040c74d63beea4a06a91a380, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5554,7 +5554,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 92035cf3bd22e46b0b9012581aca2189, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5650,7 +5650,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 92035cf3bd22e46b0b9012581aca2189, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
