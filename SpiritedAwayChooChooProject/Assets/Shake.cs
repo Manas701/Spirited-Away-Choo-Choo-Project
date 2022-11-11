@@ -14,7 +14,9 @@ public class Shake : MonoBehaviour
     private float shakeTimer = 0f;
 
     // The time in between shakes
-    public float shakeTime;
+    private float shakeTime;
+    public float shakeTimeMin;
+    public float shakeTimeMax;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class Shake : MonoBehaviour
     void Update()
     {
         shakeTimer += Time.deltaTime;
+        shakeTime = Random.Range(shakeTimeMin, shakeTimeMax);
         if (shakeTimer >= shakeTime)
         {
             transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
