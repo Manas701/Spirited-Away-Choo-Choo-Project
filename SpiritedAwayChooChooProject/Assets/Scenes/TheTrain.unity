@@ -4609,6 +4609,7 @@ MonoBehaviour:
   spacebarPressed: {fileID: 21300000, guid: dba0c8867b52d4c6da348f1fe35537a1, type: 3}
   indicatorTweenTime: 1
   pressTimeWait: 1
+  turnOffSpace: 1
 --- !u!1 &1029897494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5399,6 +5400,7 @@ MonoBehaviour:
   spacebarPressed: {fileID: 0}
   indicatorTweenTime: 0
   pressTimeWait: 0
+  turnOffSpace: 0
 --- !u!135 &1541852783
 SphereCollider:
   m_ObjectHideFlags: 0

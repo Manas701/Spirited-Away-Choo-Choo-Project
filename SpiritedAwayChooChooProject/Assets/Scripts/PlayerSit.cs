@@ -37,7 +37,7 @@ public class PlayerSit : MonoBehaviour
     private float pressTime = 0f;
     private bool pressed = false;
     public float pressTimeWait;
-    private bool turnOffSpace = true;
+    public bool turnOffSpace = true;
 
     // public GameObject[] Robert;
     // public GameObject[] Newlin;
